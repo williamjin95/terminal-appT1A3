@@ -9,7 +9,7 @@ This project follows the guidelines outlined in [PEP 8](https://www.python.org/d
 ## R6 ##
 
 Match Tracking & Analysis:
-Users can track team matches by entering details like date, opponent, venue, & final score. During games, they log player & team stats such as goals, tackles, kicks, etc. Afterward, analysis tools help spot trends & assess performance.
+Users can monitor team matches, including details like date, opponent, venue, and final score. Additionally, player statistics such as goals, tackles, and kicks are available which enable the identification of trends and evaluation of performance.
 
 Player Profiles & Performance History:
 Each player's profile includes personal info, position, jersey number, & performance history. Detailed stats like season averages, career totals, & trends are available.
