@@ -12,16 +12,30 @@ def main_menu():
         elif choice == '2':
             view_upcoming_games()
         elif choice == '3':
-            print("Exiting... Thank you for using the AFL Team Tracker!")
+            print("Exiting... Thank you for using the Saints Team Tracker!")
             break
         else:
             print("Invalid choice. Please try again.")
 
 def view_team_stats():
-    print("Team Stats will be displayed here.")
+    stats = {'St Kilda Saints': {'Wins': 3, 'Losses': 5}}
+    for team, record in stats.items():
+        print(f"{team}: Wins: {record['Wins']}, Losses: {record['Losses']}")
+
+import json
 
 def view_upcoming_games():
-    print("Upcoming games will be displayed here.")
+    try:
+        with open('upcoming_matches.json', 'r') as file:
+            games = json.load(file)
+        print("\nUpcoming Games:")
+        for game in games:
+            print(f"{game['date']}: {game['match']}")
+    except FileNotFoundError:
+        print("The data file is missing.")
+    except json.JSONDecodeError:
+        print("Data file is not in proper JSON format.")
 
 if __name__ == "__main__":
     main_menu()
+
