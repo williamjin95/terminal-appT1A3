@@ -1,0 +1,5 @@
+[
+    {"name": "Player A", "team": "Team A", "games_played": 14, "goals": 20, "tackles": 30},
+    {"name": "Player B", "team": "Team B", "games_played": 16, "goals": 15, "tackles": 25},
+    {"name": "Player C", "team": "Team C", "games_played": 12, "goals": 10, "tackles": 20}
+]
