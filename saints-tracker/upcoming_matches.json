@@ -2,5 +2,15 @@
     {"date": "2024-05-18", "match": "St Kilda vs Fremantle"},
     {"date": "2024-05-26", "match": "Melbourne vs St Kilda"},
     {"date": "2024-06-01", "match": "West Coast vs St Kilda"},
-    {"date": "2024-06-08", "match": "St Kilda vs Gold Coast"}
+    {"date": "2024-06-08", "match": "St Kilda vs Gold Coast"},
+    {"date": "2024-06-14", "match": "Brisbane vs St Kilda"},
+    {"date": "TBC", "match": "St Kilda vs Port Adelaide"},
+    {"date": "TBC", "match": "St Kilda vs Sydney"},
+    {"date": "TBC", "match": "Adelaide vs St Kilda"},
+    {"date": "TBC", "match": "St Kilda vs West Coast"},
+    {"date": "TBC", "match": "St Kilda vs Essendon"},
+    {"date": "TBC", "match": "St Kilda vs Brisbane"},
+    {"date": "TBC", "match": "Richmond vs St Kilda"},
+    {"date": "TBC", "match": "St Kilda vs Geelong"},
+    {"date": "TBC", "match": "Carlton vs St Kilda"}
 ]
