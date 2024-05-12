@@ -67,7 +67,7 @@ def show_player_stats(player_name):
     player = next((p for p in players if p['name'] == player_name), None)
     if player:
         print(f"\nStats for {player['name']}:")
-        print(f"Number; {player['number']}")
+        print(f"Number: {player['number']}")
         print(f"Games Played: {player['games_played']}")
         print(f"Disposals: {player['disposals']}")
         print(f"Marks: {player['marks']}")
