@@ -7,7 +7,8 @@ def main_menu():
         print("2. View Upcoming Games")
         print("3. List Players")
         print("4. View Player Stats")
-        print("5. Exit")
+        print("5. Compare Two Players")
+        print("6. Exit")
 
         choice = input("Enter your choice [1-5]: ")
 
@@ -21,6 +22,8 @@ def main_menu():
             player_name = input("Enter the name of the player to view stats: ")
             show_player_stats(player_name)
         elif choice == '5':
+            compare_players()
+        elif choice == '6':
             print("Exiting... Thank you for using the Saints Team Tracker!")
             break
         else:
@@ -67,11 +70,33 @@ def show_player_stats(player_name):
         print(f"Number; {player['number']}")
         print(f"Games Played: {player['games_played']}")
         print(f"Disposals: {player['disposals']}")
-        print(f"Goals: {player['goals']}")
+        print(f"Marks: {player['marks']}")
         print(f"Tackles: {player['tackles']}")
+        print(f"Goals: {player['goals']}")
     else:
         print("Player not found. Please check the name and try again.")
 
+def compare_players():
+    first_player_name = input("Enter the first player's name for comparison: ")
+    second_player_name = input("Enter the second player's name for comparison: ")
+
+    first_player = next((p for p in players if p['name'].lower() == first_player_name.lower()), None)
+    second_player = next((p for p in players if p['name'].lower() == second_player_name.lower()), None)
+
+    if not first_player:
+        print(f"First player not found: {first_player_name}")
+    if not second_player:
+        print(f"Second player not found: {second_player_name}")
+
+    if first_player and second_player:
+        print("\nComparing Players:")
+        print(f"{first_player['name']} vs {second_player['name']}")
+        print(f"Number: {first_player['number']} vs {second_player['number']}")
+        print(f"Games Played: {first_player['games_played']} vs {second_player['games_played']}")
+        print(f"Disposals: {first_player['disposals']} vs {second_player['disposals']}")
+        print(f"Marks: {first_player['marks']} vs {second_player['marks']}")
+        print(f"Goals: {first_player['goals']} vs {second_player['goals']}")
+        print(f"Tackles: {first_player['tackles']} vs {second_player['tackles']}")
+
 if __name__ == "__main__":
     main_menu()
-

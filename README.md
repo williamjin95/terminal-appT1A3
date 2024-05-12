@@ -1,5 +1,7 @@
 # Terminal App T1A3 #
 
+## R4 ##
+
 https://github.com/williamjin95/terminal-appT1A3
 
 ## R5 ##
@@ -8,62 +10,117 @@ This project follows the guidelines outlined in [PEP 8](https://www.python.org/d
 
 ## R6 ##
 
-Match Tracking & Analysis:
-Users can monitor team matches, including details like date, opponent, venue, and final score. Additionally, player statistics such as goals, tackles, and kicks are available which enable the identification of trends and evaluation of performance.
+1. View Team Stats
+Description: Displays wins and losses for each AFL team.
+Logic: Retrieves team data from a source (e.g. JSON or CSV). Iterates over the data and displays each team's stats.
 
-Player Profiles & Performance History:
-Each player's profile includes personal info, position, jersey number, & performance history. Detailed stats like season averages, career totals, & trends are available.
+2. View Upcoming Games
+Description: Lists the dates and matchups of upcoming games.
+Logic: Reads game details from upcoming_matches.json. Parses and displays each game in a list.
 
-Player Comparison:
-Users can compare players' stats side-by-side, aiding coaches, analysts, and fans in evaluating performance. They select players, view their stats, analyze the data, and provide feedback for improvement.
+3. List Players
+Description: Shows a list of players and their teams.
+Logic: Loads player data from players_stats.json. Outputs each player's name alongside their team.
+
+4. View Player Stats
+Description: Displays detailed statistics for a specified player.
+Logic: Prompts for a player name. Searches and displays detailed stats if the player is found.
+
+5. Compare Two Players
+Description: Compares statistics between two specified players.
+Logic: User inputs names of two players. Searches for and displays stats side-by-side for comparison.
+
+6. Exit
+Description: Terminates the application.
+Logic: Breaks the main menu loop, closing the program.
+
+Overall Workflow
+Users interact with a main menu that loops continuously for navigation.
+Selections trigger appropriate data handling and display functions.
+Error handling is integrated to ensure smooth operation and clear user feedback.
 
 ## R7 ##
 
-1. Basic Team Stats
-Priority: Highest
-Total Duration: 2 days
-Checklist:
-
-- Choose Data Source: Select a static JSON or CSV file to use as mock data.
-- Parse Data: Create a Python script to extract data from the file.
-- Display Team Stats: Develop a function to neatly show team statistics.
-- Error Handling: Add error checks for issues during data parsing.
-- Menu Link: Include this feature in the main menu.
-
-2. Basic Player Stats
+1. View Team Stats
 Priority: High
-Total Duration: 2 days
+Duration: 0.5 day
 Checklist:
 
-- Data Source: Utilize the same JSON or CSV for all player data.
-- Extract Data: Pull specific player statistics from the data.
-- Search Function: Build a search tool to locate players by name.
-- Display Stats: Format and present player statistics upon search.
-- Menu Link: Connect this feature to the main menu.
+- Design the data model for team stats.
+- Implement function to load team stats from JSON.
+- Create display logic in the application.
+- Add to the main menu.
+- Test team stats display functionality.
 
-3. Upcoming Games
+2. View Upcoming Games
+Priority: High
+Duration: 1 day
+Checklist:
+
+- Design data model for storing game schedules.
+- Implement function to read upcoming games from JSON.
+- Develop logic to display games clearly.
+- Add to the main menu.
+- Conduct testing with various game scenarios.
+
+3. List Players
 Priority: Medium
-Total Duration: 2 days
+Duration: 1 day
 Checklist:
 
-- Prepare Data: Make a fixed list of upcoming games.
-- Display Data: Develop a function to show upcoming games neatly.
-- Add Navigation: Include links from the main menu.
-- Format Dates: Make sure dates are clear and accurate.
-- View Details: Enable users to select a game and access information such as venue and time.
+- Define player data structure.
+- Load player information from JSON.
+- Implement player listing in the UI.
+- Test for correct player data display.
+- Ensure the names are correct.
 
-4. Search & Compare Players
-Priority: High
-Total Duration: 2 days
+4. View Player Stats
+Priority: Medium
+Duration: 1 day
 Checklist:
 
-- Search Interface: Set up CLI commands for player searches and link them to the main menu.
-- Comparison Logic: Create logic to compare important stats between two players.
-- Output Formatting: Make sure the comparison results are displayed clearly.
-- Error Handling: Manage incorrect inputs and ensure comparisons make sense.
-- Testing and Documentation: Conduct extensive testing and write instructions for using the feature.
+- Ensure player stats are properly structured.
+- Create function to search and display stats.
+- Integrate player search into the main menu.
+- Test searching and viewing functionality.
+- Verify the accuracy of the numbers.
+
+5. Compare Two Players
+Priority: Low
+Duration: 1 day
+Checklist:
+
+- Design comparison logic for two players.
+- Create UI for selecting and comparing players.
+- Implement comparison display format.
+- Add the comparison feature to the main menu.
+- Test comparison for accuracy and usability.
+
+6. Exit
+Priority: Low
+Duration: 0.5 day
+Checklist:
+
+- Implement exit functionality in the main menu.
+- Ensure clean shutdown of the app.
+- Test exit under various conditions.
+- Check exit code to optimize performance.
 
 [Trello Board](https://trello.com/b/34bz64G8)
 
 ## R8 ##
 
+System Requirements
+OS: Windows 10/8/7, macOS, or Linux.
+Python: Version 3.7+.
+RAM: Minimum 256 MB.
+Storage: At least 100 MB free.
+
+- Download python from python.org.
+- Download the AFL Team Tracker from the provided source.
+- Extract files to a desired location.
+- Navigate to the app's folder in a command prompt or terminal.
+- Start the app with: python or python3 afl_tracker.py
+- Main Menu Options: View Team Stats, View Upcoming Games, List Players, View Player Stats, Search for Player, Compare Two Players & Exit
+- Type the option number and press Enter.
+- Follow prompts for specific actions.
